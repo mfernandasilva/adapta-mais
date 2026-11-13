@@ -5,6 +5,7 @@ export type LearningProfileId = (typeof LEARNING_PROFILE_IDS)[number];
 export interface ContentRules {
   readonly guidelines: readonly string[];
   readonly avoid: readonly string[];
+  readonly highlightKeywords: boolean;
 }
 
 export interface VisualRules {

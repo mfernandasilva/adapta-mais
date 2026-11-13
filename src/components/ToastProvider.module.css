@@ -1,0 +1,74 @@
+.region {
+  position: fixed;
+  inset-inline: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 1000;
+  display: grid;
+  gap: var(--space-3);
+  justify-items: end;
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: min(26rem, 100%);
+  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-4);
+  color: var(--color-ink);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left-width: 6px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgb(30 37 40 / 0.18);
+  pointer-events: auto;
+  animation: slide-in 0.2s ease-out;
+}
+
+.success {
+  border-left-color: var(--color-success);
+  background: var(--color-success-tint);
+}
+
+.error {
+  border-left-color: var(--color-danger);
+  background: var(--color-danger-tint);
+}
+
+.info {
+  border-left-color: var(--color-primary);
+}
+
+.message {
+  flex: 1;
+  margin: 0;
+}
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  color: var(--color-ink);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.close:hover {
+  background: rgb(30 37 40 / 0.08);
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -14,6 +14,7 @@ export interface AdaptedQuestion {
 
 export interface AdaptedActivity {
   readonly title: string;
+  readonly passage: readonly string[];
   readonly instructions: readonly string[];
   readonly questions: readonly AdaptedQuestion[];
   readonly teacherNotes?: string;

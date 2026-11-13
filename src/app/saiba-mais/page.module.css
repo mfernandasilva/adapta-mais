@@ -1,0 +1,159 @@
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-5) var(--space-7);
+}
+
+.title {
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+}
+
+.lead {
+  margin: var(--space-3) 0 var(--space-6);
+  max-width: 60ch;
+  font-size: 1.125rem;
+  color: var(--color-ink-soft);
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.toc {
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.tocTitle {
+  margin: 0 0 var(--space-2);
+  font-weight: 700;
+}
+
+.tocList {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tocLink {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  text-underline-offset: 3px;
+}
+
+.tocLink:hover {
+  background: var(--color-primary-tint);
+}
+
+.content {
+  display: grid;
+  gap: var(--space-7);
+  min-width: 0;
+}
+
+.section {
+  scroll-margin-top: 5rem;
+}
+
+.sectionTitle {
+  margin-bottom: var(--space-3);
+  font-size: 1.75rem;
+}
+
+.sectionLead {
+  margin: 0 0 var(--space-5);
+  max-width: 65ch;
+  color: var(--color-ink-soft);
+}
+
+.steps {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 65ch;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.cards {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: start;
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+}
+
+.cardText,
+.issuer,
+.groupText {
+  margin: 0;
+  max-width: 65ch;
+}
+
+.issuer,
+.groupText {
+  color: var(--color-ink-soft);
+}
+
+.group {
+  margin-top: var(--space-6);
+}
+
+.groupTitle {
+  margin-bottom: var(--space-1);
+  font-size: 1.375rem;
+}
+
+.groupText {
+  margin-bottom: var(--space-4);
+}
+
+.notice {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 65ch;
+  padding: var(--space-5);
+  background: var(--color-primary-tint);
+  border-left: 6px solid var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+.notice p {
+  margin: 0;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 14rem minmax(0, 1fr);
+    gap: var(--space-7);
+  }
+
+  .toc {
+    position: sticky;
+    top: 5rem;
+    align-self: start;
+  }
+}
